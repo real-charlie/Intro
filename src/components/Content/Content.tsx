@@ -5,7 +5,7 @@ const Content = (props: any) => {
     const color = props.color || ThemeConstants.PRIMARY
 
     return (
-        <div className='container-justified p-3' ref={props.refer}>
+        <div className='p-3' ref={props.refer}>
             <article className='d-flex flex-column gap-2 overflow-hidden' {...props}>
                 <div className='text-center'
                      style={{borderBottom: props.noBorder === undefined ? `3px solid ${color}` : `none`, color}}>

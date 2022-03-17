@@ -16,7 +16,7 @@
   "CURRENCY": "IRR",
   "P1": "Standard",
   "P2": "Istantaneo",
-  "P3": "Design specializzato",
+  "P3": "Specializzato",
   "P4": "Professionista",
   "P5": "Organizzazione",
   "P6": "Assunzioni (mensile)",
@@ -33,5 +33,12 @@
   "ABOUT_FULL": "Mi chiamo Ali Salehi e vengo dall'Iran, sono uno sviluppatore web full stack con ReactJS e Django e uno sviluppatore Android e IOS con Flutter. Ho lavorato come sviluppatore in diversi team e aziende ma ora sono un libero professionista e pronto al servizio ;)",
   "FOOTER_TEXT": "Design e contenuti di Ali Salehi",
   "WA_MSG_F": "Hey Ali, sono venuto dal tuo sito web e sto richiedendo un piano '",
-  "WA_MSG_L": "', dai un'occhiata al più presto."
+  "WA_MSG_L": "', dai un'occhiata al più presto.",
+  "CUSTOMER_RATING": "Valutazione Del Cliente:",
+  "EXPERIENCE": "Web",
+  "F_EXPERIENCE": "Software",
+  "W_EXPERIENCE": "Lavoro",
+  "YEARS": "Anni",
+  "NAME": "Ali Salehi",
+  "SPEED": "Velocità"
 }

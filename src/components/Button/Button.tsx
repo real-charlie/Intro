@@ -12,7 +12,7 @@ const Button = styled.button`
   overflow: hidden;
 
   &:hover {
-    background-color: ${ThemeConstants.BG_COLOR};
+    background-color: ${ThemeConstants.SECONDARY};
     color: ${ThemeConstants.PRIMARY}
   }
 

@@ -33,5 +33,12 @@
   "ABOUT_FULL": "My name is Ali Salehi and i am from iran, i am a full stack web developer with ReactJS and Django and an android and IOS developer with Flutter. I've been worked as a developer in several teams and companies but now I am a freelancer and ready to service ;)",
   "FOOTER_TEXT": "Design and Content by Ali Salehi",
   "WA_MSG_F": "Hey Ali, I came from your website and I'm requesting plan '",
-  "WA_MSG_L": "', check this out asap."
+  "WA_MSG_L": "', check this out asap.",
+  "CUSTOMER_RATING": "Customer Rating:",
+  "EXPERIENCE": "Web",
+  "F_EXPERIENCE": "Software",
+  "W_EXPERIENCE": "Work",
+  "YEARS": "Years",
+  "NAME": "Ali Salehi",
+  "SPEED": "Speed"
 }

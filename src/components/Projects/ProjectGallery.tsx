@@ -4,7 +4,7 @@ import TagConstants, {ReadyToUseTags} from "../../constants/tag_constants";
 import ProjectItem from "./ProjectItem";
 import styled from "styled-components";
 import ThemeConstants from "../../constants/theme_constants";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 const ActionButton = styled.button`
   background-color: ${ThemeConstants.SECONDARY};
@@ -32,19 +32,39 @@ const ProjectContainer = styled.div`
 const ProjectGallery = (props: any) => {
     const [transform, setTransform] = useState(0)
     const targetComponent = useRef(null)
+    const [mouseEntered, setMouseEntered] = useState(false)
+
+    const isTransformable = (number: number, transform: number): [number, number] | any => {
+        const max = props.tg.current.offsetWidth / 2
+        const result = transform - (number * max)
+
+        // @ts-ignore
+        return [result <= 0 && Math.abs(result) < targetComponent.current.offsetWidth - max, result]
+    }
+
+    const moveContent = () => {
+        const [shouldTransform, result] = isTransformable(1, transform)
+        if (shouldTransform)
+            setTransform(result)
+        else
+            setTransform(0)
+    }
+
+    useEffect(() => {
+        if (!mouseEntered)
+            setTimeout(moveContent, 3000)
+    })
 
     const actionButtonOnClick = (number: number) => {
         if (targetComponent !== null) {
-            const max = props.tg.current.offsetWidth / 2
-            const result = transform - (number * max)
-
-            // @ts-ignore
-            if (result <= 0 && Math.abs(result) < targetComponent.current.offsetWidth - max)
+            const [shouldTransform, result] = isTransformable(number, transform)
+            if (shouldTransform)
                 setTransform(result)
         }
     }
     return (
-        <div className='d-flex flex-column gap-3'>
+        <div className='d-flex flex-column gap-3' onMouseEnter={() => setMouseEntered(true)}
+             onMouseLeave={() => setMouseEntered(false)}>
 
             <ActionButton onClick={() => actionButtonOnClick(1)}>
                 <ArrowRight/>

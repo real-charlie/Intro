@@ -21,7 +21,7 @@ const Connections = () => {
     const content: any = useSelector((state: any) => state.content)
 
     return (
-        <section className='container-justified' id='connect'>
+        <section id='connect'>
             <Content title={content['CONNECT']}>
                 <div className='d-flex flex-wrap gap-3 justify-content-center m-auto' style={{maxWidth: 400}}>
                     <ConnectionBox href='https://discord.gg/kZ5xkkBV8f'>

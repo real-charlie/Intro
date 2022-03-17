@@ -29,7 +29,7 @@ const Projects = () => {
 
     // @ts-ignore
     return (
-        <section className='container-justified' style={{direction: 'ltr'}} id='projects'>
+        <section style={{direction: 'ltr'}} id='projects'>
             <Content title={content['PROJECTS_TITLE']} refer={_ref}>
                 <ProjectGallery tg={_ref} items={[
                     projectItemObject('Intro', 'https://github.com/real-charlie/Intro',
