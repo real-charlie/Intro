@@ -11,6 +11,7 @@ import Connections from "./Connections/Connections";
 import Content from "./Content/Content";
 import Footer from "./Footer/Footer";
 import Profile from "./Profile/Profile";
+import Dialog from "./Dialog/Dialog";
 
 const App = () => {
     const dispatch = useDispatch()
@@ -34,6 +35,9 @@ const App = () => {
 
     return (
         <>
+            <Dialog style={{direction: content['LANG_NAME'] === 'فارسی' ? 'rtl' : 'ltr'}}>
+                {content['HAPPY_NEW_YEAR']}
+            </Dialog>
             <Navbar/>
             <main className='d-flex flex-column gap-3'>
                 <FirstContent plans={plansRef}/>
