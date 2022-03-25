@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import './_app.sass'
 import '../customized-bootstrap.scss';
 import {useDispatch, useSelector} from "react-redux";
-import {languageFAAction} from "../actions/language_actions";
+import {languageENAction, languageFAAction, languageITAction} from "../actions/language_actions";
 import Navbar from "./Navbar/Navbar";
 import FirstContent from "./Content/FirstContent";
 import Projects from "./Projects/Projects";
@@ -18,13 +18,13 @@ const App = () => {
 
     useEffect(
         () => {
-            // const pathname = window.location.pathname
-            // if (pathname === '/fa')
-            //     dispatch(languageFAAction())
-            // else if (pathname === '/it')
-            //     dispatch(languageITAction())
-            // else
-            dispatch(languageFAAction())
+            const pathname = window.location.pathname
+            if (pathname.startsWith('/fa'))
+                dispatch(languageFAAction())
+            else if (pathname.startsWith('/it'))
+                dispatch(languageITAction())
+            else
+            dispatch(languageENAction())
         },
         []
     )

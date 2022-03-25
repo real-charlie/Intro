@@ -21,9 +21,9 @@ const Navbar = () => {
                     <article className='d-flex justify-content-between w-100'>
                         <Dropdown items={
                             [
-                                dropdownItemObject(content['LANG_FA'], () => dispatch(languageFAAction())),
-                                dropdownItemObject(content['LANG_EN'], () => dispatch(languageENAction())),
-                                dropdownItemObject(content['LANG_IT'], () => dispatch(languageITAction())),
+                                dropdownItemObject(content['LANG_FA'], () => window.location.pathname = '/fa'),
+                                dropdownItemObject(content['LANG_EN'], () => window.location.pathname = '/'),
+                                dropdownItemObject(content['LANG_IT'], () => window.location.pathname = '/it'),
                             ]
                         }>
                             {<LanguageOutlined/>}
